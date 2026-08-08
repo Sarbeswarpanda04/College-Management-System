@@ -1,0 +1,549 @@
+/* =========================================================
+   NAVBAR - COMPLETE CSS
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    width: 100%;
+    background: #ffffff;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   NAV CONTAINER
+========================================================= */
+
+.nav-container {
+    width: 100%;
+    max-width: 1400px;
+
+    min-height: 78px;
+
+    margin: 0 auto;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 170px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+    margin-left: auto;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: block;
+}
+
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+.nav-links a {
+    display: block;
+
+    padding: 11px 15px;
+
+    color: #334155;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Hover */
+
+.nav-links a:hover {
+    color: #0d6efd;
+
+    background: #eff6ff;
+}
+
+
+/* Active */
+
+.nav-links a.active {
+    color: #0d6efd;
+
+    background: #eff6ff;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.nav-links .login-link {
+    background: #0d6efd;
+
+    color: #ffffff;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-links .login-link:hover {
+    background: #0958c9;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   HAMBURGER BUTTON
+========================================================= */
+
+.menu-btn {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 8px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 9px;
+
+    background: #eff6ff;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    position: relative;
+
+    z-index: 10001;
+
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+/* Hover */
+
+.menu-btn:hover {
+    background: #dbeafe;
+}
+
+
+/* Click */
+
+.menu-btn:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================================================
+   HAMBURGER LINES
+========================================================= */
+
+.menu-btn span {
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    margin: 5px auto;
+
+    background: #0d6efd;
+
+    border-radius: 5px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   HAMBURGER → X
+========================================================= */
+
+.menu-btn.active span:nth-child(1) {
+    transform:
+        translateY(7px)
+        rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform:
+        translateY(-7px)
+        rotate(-45deg);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .nav-container {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        gap: 15px;
+    }
+
+
+    .logo img {
+        width: 150px;
+    }
+
+
+    .nav-links {
+        gap: 0;
+    }
+
+
+    .nav-links a {
+        padding: 10px 10px;
+
+        font-size: 13px;
+    }
+
+
+    .nav-links .login-link {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    /* -----------------------------------------
+       CONTAINER
+    ----------------------------------------- */
+
+    .nav-container {
+        min-height: 70px;
+
+        padding:
+            0 18px;
+
+        gap: 10px;
+    }
+
+
+    /* -----------------------------------------
+       LOGO
+    ----------------------------------------- */
+
+    .logo {
+        margin-right: auto;
+    }
+
+
+    .logo img {
+        width: 145px;
+    }
+
+
+    /* -----------------------------------------
+       HAMBURGER
+    ----------------------------------------- */
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE NAV
+    ----------------------------------------- */
+
+    nav {
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        background: #ffffff;
+
+        border-top:
+            1px solid #e5e7eb;
+
+        box-shadow:
+            0 15px 30px
+            rgba(0, 0, 0, 0.10);
+
+        /* Closed */
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform:
+            translateY(-10px);
+
+        transition:
+            max-height 0.35s ease,
+            opacity 0.25s ease,
+            visibility 0.25s ease,
+            transform 0.25s ease;
+    }
+
+
+    /* -----------------------------------------
+       OPEN NAV
+    ----------------------------------------- */
+
+    nav.active {
+
+        max-height: 600px;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform:
+            translateY(0);
+    }
+
+
+    /* -----------------------------------------
+       MOBILE LINKS
+    ----------------------------------------- */
+
+    .nav-links {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 3px;
+
+        padding:
+            12px 15px 18px;
+    }
+
+
+    .nav-links li {
+        width: 100%;
+    }
+
+
+    .nav-links a {
+
+        width: 100%;
+
+        padding:
+            14px 15px;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE LINK HOVER
+    ----------------------------------------- */
+
+    .nav-links a:hover {
+
+        background: #eff6ff;
+
+        color: #0d6efd;
+
+        transform: translateX(3px);
+    }
+
+
+    /* -----------------------------------------
+       MOBILE LOGIN
+    ----------------------------------------- */
+
+    .nav-links .login-link {
+
+        width: 100%;
+
+        text-align: center;
+
+        margin-top: 6px;
+
+        padding:
+            13px 15px;
+    }
+
+
+    .nav-links .login-link:hover {
+
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .nav-container {
+        min-height: 68px;
+
+        padding:
+            0 14px;
+    }
+
+
+    .logo img {
+        width: 130px;
+    }
+
+
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .menu-btn span {
+        width: 23px;
+    }
+
+
+    nav {
+        top: 68px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .nav-container {
+        padding:
+            0 10px;
+    }
+
+
+    .logo img {
+        width: 115px;
+    }
+
+
+    .menu-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+}
