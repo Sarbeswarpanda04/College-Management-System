@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="College Management System Login" />
+
+    <title>Login | College Management System</title>
+
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <div class="login-container">
+      <!-- =================================
+             LEFT INFORMATION PANEL
+        ================================== -->
+
+      <div class="login-info">
+        <div class="brand">
+          <img src="../../assets/logo/college-logo.png" alt="College Logo" />
+
+          <div>
+            <h2>College Management</h2>
+
+            <span> Academic Management System </span>
+          </div>
+        </div>
+
+        <div class="info-content">
+          <span class="badge"> SECURE PORTAL </span>
+
+          <h1>
+            One Portal.<br />
+            Every Academic Need.
+          </h1>
+
+          <p>
+            Access academic information, attendance, examinations, notices,
+            results, faculty services and more through a secure, role-based
+            management system.
+          </p>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">🔐</div>
+
+            <span> Secure Role-Based Access </span>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🎓</div>
+
+            <span> Student & Faculty Services </span>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">⚡</div>
+
+            <span> Fast & Centralized Information </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================
+             LOGIN PANEL
+        ================================== -->
+
+      <div class="login-panel">
+        <div class="login-heading">
+          <h2>Welcome Back</h2>
+
+          <p id="login-description">Sign in to your student account</p>
+        </div>
+
+        <!-- =================================
+                 ROLE SWITCHER
+            ================================== -->
+
+        <div class="role-switcher">
+          <button type="button" class="role-btn active" data-role="student">
+            <span class="role-icon"> 🎓 </span>
+
+            Student
+          </button>
+
+          <button type="button" class="role-btn" data-role="faculty">
+            <span class="role-icon"> 👨‍🏫 </span>
+
+            Faculty
+          </button>
+
+          <button type="button" class="role-btn" data-role="admin">
+            <span class="role-icon"> 🛡️ </span>
+
+            Super Admin
+          </button>
+        </div>
+
+        <!-- =================================
+                 LOGIN FORM
+            ================================== -->
+
+        <form id="loginForm">
+          <!-- STUDENT / FACULTY ID -->
+
+          <div class="form-group" id="identityGroup">
+            <label for="identity" id="identityLabel">
+              Registration Number
+            </label>
+
+            <div class="input-wrapper">
+              <span class="input-icon"> 🪪 </span>
+
+              <input
+                type="text"
+                id="identity"
+                class="form-input"
+                placeholder="Enter registration number"
+                autocomplete="username"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- ADMIN EMAIL -->
+
+          <div class="form-group hidden" id="emailGroup">
+            <label for="email"> Email Address </label>
+
+            <div class="input-wrapper">
+              <span class="input-icon"> ✉ </span>
+
+              <input
+                type="email"
+                id="email"
+                class="form-input"
+                placeholder="Enter admin email"
+                autocomplete="username"
+              />
+            </div>
+          </div>
+
+          <!-- PASSWORD -->
+
+          <div class="form-group">
+            <label for="password"> Password </label>
+
+            <div class="input-wrapper">
+              <span class="input-icon"> 🔒 </span>
+
+              <input
+                type="password"
+                id="password"
+                class="form-input"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+
+              <button
+                type="button"
+                class="password-toggle"
+                id="passwordToggle"
+                aria-label="Show password"
+              >
+                👁
+              </button>
+            </div>
+          </div>
+
+          <!-- OPTIONS -->
+
+          <div class="form-options">
+            <label class="remember">
+              <input type="checkbox" id="remember" />
+
+              Remember me
+            </label>
+
+            <a
+              href="forgot-password.html"
+              class="forgot-password"
+              id="forgotLink"
+            >
+              Forgot Password?
+            </a>
+          </div>
+
+          <!-- LOGIN BUTTON -->
+
+          <button type="submit" class="login-btn" id="loginButton">
+            Login as Student
+          </button>
+        </form>
+
+        <div class="security-note">
+          🔒
+          <span> Your credentials are securely protected </span>
+        </div>
+
+        <div class="panel-footer">© 2026 College Management System</div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
