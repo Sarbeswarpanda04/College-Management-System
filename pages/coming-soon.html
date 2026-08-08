@@ -1,0 +1,367 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coming Soon | College Management System</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #dbeafe,
+                    transparent 40%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    #e9d5ff,
+                    transparent 40%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f8fbff,
+                    #eef2ff
+                );
+
+            color: #1e293b;
+            overflow: hidden;
+        }
+
+
+        /* Decorative circles */
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+
+            width: 280px;
+            height: 280px;
+
+            border-radius: 50%;
+
+            filter: blur(5px);
+
+            opacity: .35;
+
+            z-index: -1;
+        }
+
+        body::before {
+            background: #93c5fd;
+            top: -120px;
+            left: -100px;
+        }
+
+        body::after {
+            background: #c4b5fd;
+            bottom: -120px;
+            right: -100px;
+        }
+
+
+        /* Main card */
+
+        .coming-soon {
+            width: 100%;
+            max-width: 650px;
+
+            padding: 60px 45px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, .72);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border: 1px solid
+                rgba(255, 255, 255, .8);
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 25px 70px
+                rgba(71, 85, 105, .15);
+
+            animation:
+                fadeUp .8s ease;
+        }
+
+
+        /* Logo */
+
+        .logo {
+            width: 80px;
+            height: 80px;
+
+            margin: 0 auto 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(59, 130, 246, .12);
+
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 65px;
+            height: 65px;
+
+            object-fit: contain;
+        }
+
+
+        /* Badge */
+
+        .badge {
+            display: inline-block;
+
+            padding: 7px 16px;
+
+            border-radius: 30px;
+
+            background: #e0edff;
+
+            color: #2563eb;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* Heading */
+
+        h1 {
+            font-size: clamp(42px, 7vw, 68px);
+
+            line-height: 1.05;
+
+            margin-bottom: 18px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #2563eb,
+                    #7c3aed
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .subtitle {
+            font-size: 18px;
+
+            color: #64748b;
+
+            max-width: 500px;
+
+            margin: 0 auto 30px;
+
+            line-height: 1.7;
+        }
+
+
+        /* Progress */
+
+        .progress {
+            width: 100%;
+            max-width: 420px;
+
+            height: 7px;
+
+            margin: 0 auto 12px;
+
+            background: #e2e8f0;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+
+        .progress-bar {
+            width: 72%;
+            height: 100%;
+
+            border-radius: inherit;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #3b82f6,
+                    #8b5cf6
+                );
+
+            animation:
+                progress 2s ease;
+        }
+
+
+        .progress-text {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+
+        /* Footer */
+
+        .footer {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+
+        /* Animation */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        @keyframes progress {
+
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 72%;
+            }
+
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .coming-soon {
+                padding: 45px 25px;
+                border-radius: 22px;
+            }
+
+            .logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .logo img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="coming-soon">
+
+        <!-- College Logo -->
+        <div class="logo">
+
+            <img
+                src="../assets/logo/college-logo.png"
+                alt="College Logo"
+            >
+
+        </div>
+
+
+        <!-- Badge -->
+        <div class="badge">
+            COLLEGE MANAGEMENT SYSTEM
+        </div>
+
+
+        <!-- Heading -->
+        <h1>
+            Coming Soon
+        </h1>
+
+
+        <!-- Description -->
+        <p class="subtitle">
+            We're building something better for our students,
+            faculty and administration. Our new college management
+            portal will be launching soon.
+        </p>
+
+
+        <!-- Progress -->
+        <div class="progress">
+
+            <div class="progress-bar"></div>
+
+        </div>
+
+        <div class="progress-text">
+            System under development
+        </div>
+
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2026 College Management System. All rights reserved.
+        </div>
+
+    </main>
+
+</body>
+</html>
+```
